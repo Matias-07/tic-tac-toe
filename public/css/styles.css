@@ -1,0 +1,26 @@
+button {
+    width: 200px;
+    height: 200px;
+    position: relative; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 600px;
+    margin: auto;
+}
+
+img {
+    display: none;
+    max-width: 150px;
+    margin: auto;
+    position: absolute; 
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+}
+
+body{
+    background-color: black;
+}
