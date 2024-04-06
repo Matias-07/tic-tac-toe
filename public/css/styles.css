@@ -13,6 +13,15 @@ div button {
     left: 40%;
     border: none;
     color: #fff;
+    cursor: pointer;
+}
+
+.resetButton {
+    transition: transform 0.2s ease-in-out;
+}
+
+.resetButton:hover {
+    transform: scale(1.1);
 }
 
 .container {
