@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('.container button');
-let turn = 0;
+let turn = 1;
 const board = [];
 let gameEnded = false;
 
@@ -31,6 +31,9 @@ const buttonPress = (e, pos) => {
     if (youWin()) {
         alert('YOU WON!! CONGRATULATIONS!');
         gameEnded = true;
+        document.getElementById('button').style.display = 'block'
+        document.getElementById("button").disabled = false;
+        document.getElementById("button").style.backgroundColor = color
         return;
     }
 
@@ -58,5 +61,9 @@ const youWin = () => {
     return false;
 }
 
-document.querySelectorAll('button').forEach((obj, i) =>
+document.querySelectorAll('div button').forEach((obj, i) =>
     obj.addEventListener('click', (e) => buttonPress(e, i)));
+
+document.getElementById("button").addEventListener('click', () => {
+    location.reload();
+});
